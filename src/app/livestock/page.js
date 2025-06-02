@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Livestock() {
   const [animals, setAnimals] = useState([
@@ -35,6 +37,19 @@ export default function Livestock() {
     <div className="flex min-h-screen bg-gray-50 p-10">
       {/* Sol Menü */}
       <nav className="fixed left-0 top-0 h-screen w-60 bg-[#4a7a4c] text-white p-6 flex flex-col justify-start">
+        <div className="flex flex-col items-center mb-8">
+          <Image
+            src="/profile.jpg"
+            alt="Profile"
+            width={80}
+            height={80}
+            className="rounded-full mb-2"
+          />
+          <div className="text-center">
+            <p className="font-semibold">Namik Korona</p>
+            <p className="text-sm">Farm Owner</p>
+          </div>
+        </div>
         <h2 className="text-3xl font-bold mb-6">Menu</h2>
         <ul className="space-y-4">
           <li>

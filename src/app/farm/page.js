@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaSeedling } from "react-icons/fa";
 import { GiFarmTractor } from "react-icons/gi";
+
 
 export default function Farm() {
   const [corps, setCorps] = useState(false);
@@ -47,6 +49,19 @@ export default function Farm() {
       {corps && addCorps}
 
       <div className="fixed left-0 top-0 h-screen w-60 bg-[#4a7a4c] text-white p-4 flex flex-col justify-between">
+        <div className="flex flex-col items-center mb-8">
+          <Image
+            src="/profile.jpg"
+            alt="Profile"
+            width={80}
+            height={80}
+            className="rounded-full mb-2"
+          />
+          <div className="text-center">
+            <p className="font-semibold">Namik Korona</p>
+            <p className="text-sm">Farm Owner</p>
+          </div>
+        </div>
         <div>
           <h2 className="text-2xl font-bold mb-6">Menu</h2>
           <ul className="space-y-4 ">
@@ -62,10 +77,10 @@ export default function Farm() {
               <Link href="/livestock">Livestock</Link>
             </li>
             <li>
-                <Link href="/dashboard">
-              <p href="#" className="hover:underline">
-                Dashboard
-              </p>
+              <Link href="/dashboard">
+                <p href="#" className="hover:underline">
+                  Dashboard
+                </p>
               </Link>
             </li>
           </ul>
